@@ -1,6 +1,9 @@
 from fastapi import FastAPI
+from routes.chat import router
 
-app = FastAPI(title="Chatbot API")
+app = FastAPI()
+
+app.include_router(router)
 
 
 @app.get("/")
